@@ -40,9 +40,12 @@ app.use(function* handleErrors(next) {
  * / - это корень приложения, именно то место, куда у нас осуществляется доступ, поэтому все, кроме него, мы отправляем дальше
  */
 app.use(function* home(next) {
-    if (this.request.path !== '/') return yield next;
-    if (this.session.hasAuth) yield this.render('public/main', {login: this.session.login});
-    else this.redirect('/login'); // сработает только если пользователь не авторизован
+    if (this.request.path !== '/') {
+        return yield next;
+    }
+    if (this.session.hasAuth) {
+        yield this.render('public/main', {login: this.session.login});
+    } else this.redirect('/login'); // сработает только если пользователь не авторизован
 });
 
 /**
@@ -113,7 +116,9 @@ app.use(function* register(next) {
  */
 
 app.use(function* logout(next) {
-    if (this.request.path !== '/logout') return yield next; // если это не logout, то следующие две строчки исполнены не будут
+    if (this.request.path !== '/logout') { // если это не logout, то следующие две строчки исполнены не будут
+        return yield next;
+    }
     this.session.hasAuth = false;
     this.redirect('/login');
 });
