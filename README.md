@@ -22,5 +22,7 @@ $ node app.js
 
 ### Usage
 
+Open your browser and head to localhost:3000.
+
 You can sign in with pre-registrated test user with login/password: test/test.
 
