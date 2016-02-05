@@ -5,12 +5,12 @@ This is an amazingly useless web application based on node.js Koa framework with
 
 ### Installation
 
-Clone the repository, then download the dependencies using nvm
+Clone the repository, then download the dependencies using npm
 ```sh
-$ nvm install
+$ npm install
 ```
 
-If you don't have node.js installed, you can install it with nvm too:
+If you don't have node.js installed, you can install it with nvm:
 ```sh
 $ nvm ls-remote
 $ nvm install 4.2.6
