@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+</head>
+<body>
+<form method="post" action="/login">
+    <fieldset><legend>Login</legend>
+        <ul>
+            <li><label for="login">Login</label> <input type="text" name="login" id="login" required></li>
+            <li><label for="passwordl">Password</label> <input type="text" name="password" id="passwordl" required></li>
+            <li><label></label> <button type="submit" class="btn btn-success">Log in</button></li>
+        </ul>
+    </fieldset>
+</form>
+<form method="post" action="/register">
+    <fieldset><legend>Register</legend>
+        <ul>
+            <li><label for="login">Login</label> <input type="text" name="register" id="register" required></li>
+            <li><label for="passwordr">Password</label> <input type="text" name="password" id="passwordr" required></li>
+            <li><label></label> <button type="submit" class="btn btn-primary">Register!</button></li>
+        </ul>
+    </fieldset>
+</form>
+</body>
+</html>
